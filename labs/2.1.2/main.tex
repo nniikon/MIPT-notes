@@ -1,0 +1,143 @@
+\documentclass[a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[russian,english]{babel}
+\usepackage[T2A]{fontenc}
+\usepackage[left=10mm, top=20mm, right=18mm, bottom=15mm, footskip=10mm]{geometry}
+\usepackage{indentfirst}
+\usepackage{amsmath,amssymb}
+\usepackage[italicdiff]{physics}
+\usepackage{graphicx}
+\usepackage{multirow}
+\usepackage{svg}
+\graphicspath{{images/}}
+\DeclareGraphicsExtensions{.pdf,.png,.jpg}
+\usepackage{wrapfig}
+\usepackage{caption}
+\captionsetup[figure]{name=Рисунок}
+\captionsetup[table]{name=Таблица}
+\title{\underline{Определение $C_p / C_v$ методом адиабатического расширения газа}}
+\author{Каспаров Николай, Б01-304}
+
+\begin{document}
+
+\maketitle
+\begin{center}
+\Large{\textbf{ }}
+\end{center}
+
+\subparagraph{Цель работы:}
+
+Определить отношение $C_p / C_v$ для воздуха по измерению давления в стеклянном сосуде.
+
+\subparagraph{В работе используются:}
+
+Стелянный сосуд, U-образный жидкостный манометр, разиновая груша.
+
+\section{Теоретическое введение}
+
+Адиабатический процесс -- процесс, происходящий без теплообмена с окружающей средой.
+
+Формула Майера гласит, что:
+
+\begin{equation}
+    C_p - C_v = R 
+\end{equation}
+
+Отношение этих теплоемкостей часто используется и называется показателем адиабаты
+
+\begin{equation}
+     \gamma = \frac{C_p}{C_v}
+\end{equation}
+
+Известно, что на каждую степень свободы, приходится энергия, равная $kT/2$, 
+где $k = 1.38 \cdot 10^{-23} $ Дж/К - постоянная Больцмана. Значит:
+
+\begin{equation}
+    U = \frac{i}{2}kN_AT = \frac{i}{2}RT \qquad \qquad
+    C_v = \frac{i}{2}R
+\end{equation}
+
+Тогда, из формулы (2) получим:
+
+\begin{equation}
+     \gamma = \frac{i + 2}{i}
+\end{equation}
+
+В частности, для воздуха $\gamma_\text{в} = \frac{7}{5} = 1.4$.
+
+В адиабатном процессе $\delta Q = 0$, тогда $dU = C_vdT$, получим $C_vdT + PdV = 0$.
+Используя соотношение $PV = RT$, получим:
+
+\begin{equation*}
+    C_V \frac{dT}{T} + R \frac{dV}{V} = 0
+\end{equation*}
+
+Интегрируя, получим:
+
+\begin{equation}
+    PV^\gamma = const
+\end{equation}
+
+\subsection*{Экспериментальная установка}
+
+В начале опыта мы, используя резиновую грушу, повышаем давление
+в стеклянном сосуде до $P_1 > P_0$, через время температура сравняется с комнатной $T_1$.
+Затем, откроем кран $K$, соединяющий сосуд с атмосферой, на малое $\Delta t$.
+Через время $\Delta t_p$ давление сравняется с атмосферным,
+а через $\Delta t_T$ температура сравняется с атмосферным. Очевидно, что:
+
+\begin{equation}
+    \Delta t_p \ll \Delta t \ll \Delta t_T
+\end{equation}
+
+Из уравнение адиабаты (5) получим:
+
+\begin{equation}
+    \biggl(\frac{P_1}{P_0}\biggl)^{\gamma-1} = \biggl(\frac{T_1}{T_2}\biggl)^\gamma, \text{ где}
+\end{equation}
+
+"1" - начальное состояние, 
+"2" - момент выравнивания давления с атмосферным
+
+Затем, газ снова сравнивает температуру с комнатной, $T_3 = T_1$.
+В этом процессе также повышается и давление газа до $P_3$.
+
+По закону Гей-Люссака получим:
+
+\begin{equation}
+    \frac{P_0}{T_2} = \frac{P_3}{T_3} = \frac{P_3}{T_1}
+\end{equation}
+
+Из уравнения (7), исключая температуры уравнением (8) получим:
+
+\begin{equation*}
+    \biggl(\frac{P_3}{P_0}\biggl)^{\gamma} = \biggl(\frac{P_1}{P_0}\biggl)^{\gamma - 1}
+\end{equation*}
+
+Выразим $\gamma$:
+
+\begin{equation}
+    \gamma = \frac{\ln(P_1/P_0)}{\ln(P_1/P_3)}
+\end{equation}
+
+Давления $P_1$ и $P_2$ отличаются от атмосферного
+на величину гидростатического давления столба воды, который мы измеряем: 
+
+\begin{equation}
+    P_1 = P_0 + \rho gh_1 \qquad \qquad P_3 = P_0 + \rho gh_2
+\end{equation}
+
+Из уравнений (9) и (10), разложением логарифмов в ряд, получим:
+
+\begin{equation}
+    \gamma = \frac{\ln(1 + \rho gh_1 / P_0)}
+                  {\ln(1 + \rho gh_1 / P_0) - \ln(1 + \rho gh_2 / P_0)} \approx 
+             \frac{h_1}{h_1 - h_2}
+\end{equation}
+
+\section{Измерения}
+                                                                                                                                                            
+\includesvg[]{output}
+
+\end{document}
+
