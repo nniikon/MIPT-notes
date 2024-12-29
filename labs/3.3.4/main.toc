@@ -1,0 +1,21 @@
+\babel@toc {russian}{}\relax 
+\contentsline {section}{\numberline {1}Введение}{2}{section.1}%
+\contentsline {subsection}{\numberline {1.1}Цели работы}{2}{subsection.1.1}%
+\contentsline {subsection}{\numberline {1.2}Используемые приборы}{2}{subsection.1.2}%
+\contentsline {subsection}{\numberline {1.3}Систематические погрешности}{2}{subsection.1.3}%
+\contentsline {subsection}{\numberline {1.4}Теоретическая часть}{2}{subsection.1.4}%
+\contentsline {subsubsection}{\numberline {1.4.1}Эффект Холла}{2}{subsubsection.1.4.1}%
+\contentsline {subsubsection}{\numberline {1.4.2}Тензор проводимости в магнитном поле}{3}{subsubsection.1.4.2}%
+\contentsline {subsubsection}{\numberline {1.4.3}Мостик Холла}{5}{subsubsection.1.4.3}%
+\contentsline {subsection}{\numberline {1.5}Экспериментальная установка}{5}{subsection.1.5}%
+\contentsline {section}{\numberline {2}Ход работы}{8}{section.2}%
+\contentsline {subsection}{\numberline {2.1}Калибровочный график зависмости}{8}{subsection.2.1}%
+\contentsline {subsection}{\numberline {2.2}Зависимость k(B)}{9}{subsection.2.2}%
+\contentsline {subsection}{\numberline {2.3}Постоянная Холла}{10}{subsection.2.3}%
+\contentsline {subsection}{\numberline {2.4}Остальные расчеты}{11}{subsection.2.4}%
+\contentsline {subsection}{\numberline {2.5}Определение знака носителей заряда}{12}{subsection.2.5}%
+\contentsline {section}{\numberline {3}Вывод}{13}{section.3}%
+\contentsline {section}{\numberline {4}Справочные данные}{14}{section.4}%
+\contentsline {subsection}{\numberline {4.1}МНК}{14}{subsection.4.1}%
+\contentsline {subsection}{\numberline {4.2}Метод хи-квадрат (взвешенный МНК)}{14}{subsection.4.2}%
+\contentsline {subsection}{\numberline {4.3}Погрешности косвенно измеренных величин}{15}{subsection.4.3}%

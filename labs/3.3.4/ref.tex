@@ -1,0 +1,84 @@
+\section{Справочные данные}
+
+\subsection{МНК}
+
+Формулы, используемые для рассчета коэффициентов $a, b$ и их случайных погрешностей $\sigma_a, \sigma_b$ уравнения наилучшей прямой $y = ax+ b$ через метод наименьших квадратов (МНК):
+$$
+    a = \frac{\langle xy \rangle - \langle x \rangle \langle y \rangle}{\langle x^2 \rangle - \langle x \rangle ^2}
+$$
+
+$$
+    \sigma_a \approx \frac{1}{\sqrt{n}} \sqrt{\frac{\langle y^2 \rangle - \langle y \rangle^2}{\langle x^2 \rangle - \langle x \rangle^2} - a^2}
+$$
+
+$$
+    b = \langle y \rangle - a \langle x \rangle
+$$
+
+$$
+    \sigma_b = \sigma_a \sqrt{\langle x^2 \rangle - \langle x \rangle^2}
+$$
+
+Если точки описываются линейной зависимостью $y = kx$, угловой коэффициент $k$ прямой и его случайную погрешность $\sigma_k$ будем рассчитывать по следующим формулам:
+$$
+    k = \frac{\langle xy \rangle}{\langle x^2 \rangle}
+$$
+
+$$
+    \sigma_k = \frac{1}{\sqrt{n}} \sqrt{\frac{\langle y^2 \rangle}{\langle x^2 \rangle} - k^2},
+$$
+
+\subsection{Метод хи-квадрат (взвешенный МНК)}
+
+Метод применяется, когда выполнены все условия для метода наименьших квадратов (МНК), но погрешности $\sigma_i$ различны. В этом случае вес элемента обозначается как:
+
+\[
+w_i = \dfrac{1}{\sigma_i^2}
+\]
+
+Введём понятие взвешенного среднего для набора значений $\{x_i\}$:
+
+\[
+\langle x \rangle' = \dfrac{\sum w_i x_i}{\sum w_i}
+\]
+
+Тогда, из определения метода хи-квадрат, получаем формулы, аналогичные формулам метода наименьших квадратов:
+
+\[
+k = \dfrac{\langle xy \rangle' - \langle x \rangle' \langle y \rangle'}{\langle x^2 \rangle' - \langle x \rangle'^2}
+\]
+
+\[
+b = \langle y \rangle' - k \langle x \rangle'
+\]
+
+\subsection{Погрешности косвенно измеренных величин}
+
+Полные погрешности косвенно измеренных величин будем считать по формулам, приведенным в таблице \ref{pog}.
+
+\begin{table}[h!]
+\centering
+\caption{Расчёт погрешностей косвенно измеренных величин}
+\label{pog}
+\begin{tabular}{|c|c|}
+\hline
+\multicolumn{1}{|c|}{Формула для величины} & Полная погрешность \\ \hline
+                    $A = B \pm C$          & $\sigma_A^2 = \sigma_B^2 + \sigma_C^2 $                  \\ \hline
+                    $A = B \cdot C$        & $\varepsilon_A^2 = \varepsilon_B^2 + \varepsilon_C^2 $   \\ \hline
+                    $A = B / C$            & $\varepsilon_A^2 = \varepsilon_B^2 + \varepsilon_C^2 $   \\ \hline
+                    $A = B^\beta \cdot C\gamma$        & $\varepsilon_A^2 = (\beta \cdot \varepsilon_B)^2 + (\gamma \cdot \varepsilon_C)^2 $   \\ \hline
+\end{tabular}
+\end{table}
+
+И, наконец, приведем формулу для оценки случайной погрешности измеряемой величины:
+$$
+    \sigma = \sqrt{\frac{1}{n(n-1)} \sum \limits_{i = 1}^{n} (x_i - \langle x \rangle)^2},
+$$
+где $\langle x \rangle$ - наилучшее значение измеряемой величины, которое можно рассчитать так:
+$$
+    \langle x \rangle = \frac{1}{n} \sum \limits_{i = 1}^{n} x_i
+$$
+
+
+
+

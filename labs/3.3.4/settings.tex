@@ -1,0 +1,119 @@
+\usepackage[utf8]{inputenc} %кодировка
+\usepackage[T1,T2A]{fontenc} % тоже кодировка
+\usepackage[english,russian]{babel} %языки
+
+\usepackage{multirow}
+\usepackage{tabularx,booktabs}
+\usepackage{longtable}
+
+\usepackage{ulem}
+\usepackage{graphicx, float} %пакет для единого оформления всех плавающих объектов (избегаем повторяющихся команд в документе)
+
+\DeclareGraphicsExtensions{.pdf,.png,.jpg,.eps}%форматы 
+\usepackage{titlesec}
+\setcounter{secnumdepth}{4}
+\titleformat{\paragraph}
+{\normalfont\normalsize\bfseries}{\theparagraph}{1em}{}
+\titlespacing*{\paragraph}
+{0pt}{3.25ex plus 1ex minus .2ex}{1.5ex plus .2ex}
+
+\graphicspath{{images/}} % выбираем папку, в которую сохраняем все рисунки, чтобы не было хаоса файлов
+
+\usepackage{amsmath,amssymb}%математические формулы и символы
+
+\usepackage[a4paper,left=30mm,right=15mm,top=20mm,bottom=20mm]{geometry} % устанавливает поля документа
+
+\parindent=4ex %красная строка
+\parskip=5mm %расстояние между параграфами
+\usepackage{indentfirst} %делать отступ в начале параграфа
+
+\usepackage{hyperref} % добавление ссылок
+
+\def\hmath$#1${\texorpdfstring{{\rmfamily\textit{#1}}}{#1}}
+%настройка подписей плавающих объектов
+
+\makeindex %нумерация 
+
+\usepackage{array,graphicx,caption} %картинки, подписи, таблицы
+%\usepackage{endfloat} - для вывода картинок со списком в конце файла
+
+\usepackage{caption} %подписи к картинкам
+\captionsetup[table]{skip=4pt,singlelinecheck=off}
+
+\usepackage[labelformat=simple]{subcaption} %для subfigure
+\renewcommand\thesubfigure{(\alph{subfigure})}
+
+\usepackage[export]{adjustbox} %чтобы влево-вправо картинки ставить
+
+\usepackage[labelformat=simple]{subcaption}
+% метка subfigure: "(а)" вместо дефолтного "а"
+
+\renewcommand\thesubfigure{(\alph{subfigure})} % для продвинутого captionof
+
+\usepackage{afterpage,placeins} % для барьеров 
+
+\usepackage{wrapfig} %добавление wrapfig
+
+\usepackage[nottoc]{tocbibind} %подключает в содержание список лит-ры
+
+\usepackage{multicol}
+
+\usepackage{setspace}
+
+\usepackage{ gensymb }
+
+\usepackage{listings}
+
+
+
+\usepackage{tabularx}
+
+\usepackage[normalem]{ulem}
+
+\usepackage{xcolor}
+\usepackage{colortbl}
+
+\usepackage{wrapfig}
+\usepackage{graphicx}
+\usepackage{mathtext}
+\usepackage{amsmath}
+\usepackage{siunitx} % Required for alignment
+\usepackage{subfigure}
+\usepackage{multirow}
+\usepackage{rotating}
+\usepackage[T1,T2A]{fontenc}
+\usepackage[russian]{babel}
+\usepackage{caption}
+\usepackage{float}
+
+\renewcommand{\arraystretch}{1.2}
+
+\graphicspath{{pictures/}}
+
+%New colors defined below
+\definecolor{codegreen}{rgb}{0,0.6,0}
+\definecolor{codegray}{rgb}{0.5,0.5,0.5}
+\definecolor{codepurple}{rgb}{0.58,0,0.82}
+\definecolor{backcolour}{rgb}{0.95,0.95,0.92}
+
+%Code listing style named "mystyle"
+\lstdefinestyle{mystyle}{
+  backgroundcolor=\color{backcolour}, commentstyle=\color{codegreen},
+  keywordstyle=\color{magenta},
+  numberstyle=\tiny\color{codegray},
+  stringstyle=\color{codepurple},
+  basicstyle=\ttfamily\footnotesize,
+  breakatwhitespace=false,         
+  breaklines=true,                 
+  captionpos=b,                    
+  keepspaces=true,                 
+  numbers=left,                    
+  numbersep=5pt,                  
+  showspaces=false,                
+  showstringspaces=false,
+  showtabs=false,                  
+  tabsize=2
+}
+
+%"mystyle" code listing set
+\lstset{style=mystyle}
